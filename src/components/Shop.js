@@ -12,7 +12,7 @@ class Shop extends Component {
 
 // PropTypes
 Shop.propTypes = {
-    item: PropTypes.array.isRequired
+    items: PropTypes.array.isRequired
 }
 
 export default Shop;

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
+import './App.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Menu from "./components/Menu";
-import ContentMenu from "./components/ContentMenu";
+import GameMenu from "./components/GameMenu";
 import Something from "./Something";
 import Child from "./Child";
-import Shop from './components/Shop';
+import Home from './components/Home';
 
 class App extends Component {
   state = { 
@@ -33,43 +33,36 @@ class App extends Component {
     ]
   }
 
-  notify = () => toast("Wow so easy !");
+  makeToast = message => toast(message, {
+    position: toast.POSITION.BOTTOM_RIGHT,
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: false
+  });
 
   render() {
     return (
         <div className="App">
-          <Menu />
-          <main class="w-90 center">
+          <Home />
+          <main className="w-80 center">
             <Something class text={"Domesticated Catgirl Simulator | " + this.state.version} />
             <Child
               onclick={() => {
                 this.setState({ 
                   money: this.state.money + 1,
-                  xp: this.state.xp + 3,
-                  notify: this.notify,
+                  xp: this.state.xp + 3
                 });
+                this.makeToast("Sold your soul for a money!");
               }}
             />
             <Something text={'Money: ' + this.state.money} />
             <Something text={'Exp: ' + this.state.xp} />
             <Something text={'Level: ' + this.state.lvl} />
             <ToastContainer />
-            <div class="flex flex-row">
-              <div class="w-50">
-                <h3 class="f3 fw1">Shop</h3>
-                <div class="flex flex-wrap">
-                  <Shop items={this.state.items} />
-                </div>
-              </div>
-              <div class="w-50">
-                <h3 class="f3 fw1">Inventory</h3>
-                <div class="flex flex-wrap">
-                  
-                </div>
-              </div>
-            </div>
           </main>
-          <ContentMenu />
+          <GameMenu />
         </div>
     );
   }
