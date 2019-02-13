@@ -1,5 +1,4 @@
 import React from "react";
-import GameMenu from "./GameMenu";
 import Character from "./Character";
 import Floor from '../assets/img/wall-stripes-dark.gif';
 import Wall from '../assets/img/wall-dcgs.gif';
@@ -9,8 +8,9 @@ let floor = {
     position: 'fixed',
     bottom: '0',
     width: '100%',
-    height: '256px',
-    backgroundImage: `url(${Floor})`
+    height: '170px',
+    backgroundImage: `url(${Floor})`,
+    backgroundPosition: 'top center'
 };
 let wall = {
     position: 'fixed',
@@ -26,7 +26,6 @@ const Home = () => (
         <div style={ wall }></div>
         <div style={ floor }></div>
         <Character />
-        <GameMenu />
     </div>
 )
 

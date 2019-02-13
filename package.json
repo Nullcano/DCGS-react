@@ -1,8 +1,9 @@
 {
-  "name": "test-thing-for-shi",
+  "name": "Domesticated-Catgirl-Simulator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "git": "^0.1.5",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-router-dom": "^4.3.1",

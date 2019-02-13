@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import './App.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import GameMenu from "./components/GameMenu";
+import LeftMenu from "./components/LeftMenu";
+import RightMenu from "./components/RightMenu";
+
 import Something from "./Something";
 import Child from "./Child";
 import Home from './components/Home';
@@ -62,7 +64,8 @@ class App extends Component {
             <Something text={'Level: ' + this.state.lvl} />
             <ToastContainer />
           </main>
-          <GameMenu />
+          <LeftMenu />
+          <RightMenu />
         </div>
     );
   }

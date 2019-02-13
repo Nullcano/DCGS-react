@@ -1,7 +1,75 @@
+.bg-dcgs {
+    background-color: #540d6e;
+}
+.b--dcgs {
+    border-color: #540d6e;
+}
+.bg-dark {
+    background-color: #1c0627;
+}
+
 .GameMenuCollection {
     width: 512px;
 }
+.HomeItems {
+    display: none;
+}
+.Home:hover > .HomeItems {
+    display: flex;
+}
 .Character {
-    margin-bottom: 128px;
-    margin-left: 256px;
+    position: fixed;
+    left: 50%;
+    bottom: 128px;
+    transform: translateX(-50%);
+}
+.GameMenu ul li {
+	position:relative;
+}
+
+.GameMenu ul ul {
+	display:none;
+    position:absolute;
+    top: 0;
+	left:5rem;
+	padding:0
+}
+.GameMenu .Right ul ul {
+	display:none;
+    position:absolute;
+    top: 0;
+	right:5rem;
+	padding:0
+}
+.GameMenu ul ul li {
+	float:none;
+}
+.GameMenu ul ul ul {
+	bottom:0;
+	left:100%
+}
+.GameMenu .Right ul ul ul {
+	bottom:0;
+	right:100%
+}
+.GameMenu ul li:hover > ul {
+	display:block
+}
+.ProgressRight {
+    position: relative;
+    margin-right: -100px;
+}
+.ProgressNrg {
+    position: fixed;
+    left: 128px;
+    bottom: 94px;
+    width: 256px;
+    height: 32px;
+}
+.ProgressLvl {
+    position: fixed;
+    left: 128px;
+    bottom: 60px;
+    width: 256px;
+    height: 32px;
 }
